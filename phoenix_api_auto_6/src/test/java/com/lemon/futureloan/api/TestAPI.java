@@ -26,6 +26,7 @@ public class TestAPI {
 //		 * 6.判断测试用例执行结果是否符合预期
 		//断言
 		System.out.println(result);
+		System.out.println("123");
 
 	}
 
