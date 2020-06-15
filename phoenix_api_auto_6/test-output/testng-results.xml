@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2400" started-at="2020-06-15T16:38:37 CST" finished-at="2020-06-15T16:38:39 CST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2400" started-at="2020-06-15T16:38:37 CST" finished-at="2020-06-15T16:38:39 CST">
+      <class name="com.lemon.api.auto.testcase.register.RegisterTest">
+        <test-method status="PASS" signature="f()[pri:0, instance:com.lemon.api.auto.testcase.register.RegisterTest@3108bc]" name="f" duration-ms="2368" started-at="2020-06-15T16:38:37 CST" finished-at="2020-06-15T16:38:39 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.lemon.api.auto.testcase.register.RegisterTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

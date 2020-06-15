@@ -3,9 +3,7 @@ package com.lemon.api.auto.testcase.register;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.ParseException;
@@ -22,25 +20,30 @@ import org.testng.annotations.Test;
 import com.lemon.api.auto.util.HttpUtil;
 import com.lemon.api.auto.util.HttpUtil2;
 
-public class RegisterTest {
+public class RegisterTest2 {
 
 	@Test
 	public void f() {
+//		//准备url
 		String url = "http://localhost/index.php/Home/user/login.html";
-		Map<String, String> parametersMap = new HashMap<String, String>();
-		parametersMap.put("mobliephome", "13899999999");
-		parametersMap.put("pwd", "123456");
-		String result = HttpUtil.post(url, parametersMap);
+//		 准备参数
+		List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+		parameters.add(new  BasicNameValuePair("mobliephone", "1389099000"));
+		parameters.add(new BasicNameValuePair("pwd", "123456"));
+		//发包
+		String result = HttpUtil2.post(url, parameters);
+		//查看结果
 		System.out.println(result);
 	}	
 	
 	public void f1() {
 		//准备url
 				String url = "http://localhost/index.php/Home/user/login.html";
-				Map<String, String> parametersMap = new HashMap<String, String>();
-				parametersMap.put("memberId", "9");
+//				 准备参数
+				List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+				parameters.add(new  BasicNameValuePair("moblieIg", "p"));
 				//发包
-				String result = HttpUtil.get(url, parametersMap);
+				String result = HttpUtil2.get(url, parameters);
 				//查看结果
 				System.out.println(result);
 	}
