@@ -43,6 +43,7 @@ public class HttpUtil {
 			post.setEntity(new UrlEncodedFormEntity(parameters));
 			//发包以post方式
 			CloseableHttpResponse response = httpClient.execute(post);
+			//通过此方法讲接口参数设置到请求体中
 			String result = EntityUtils.toString(response.getEntity());
 			return result;
 		} catch (Exception e) {
@@ -60,6 +61,7 @@ public class HttpUtil {
 	public static String get(String url, Map<String, String> parametersMap) {
 		try {
 			CloseableHttpClient httpClient = HttpClients.createDefault();
+			HttpGet get = new HttpGet(url);
 			List<NameValuePair> parameters = new ArrayList<NameValuePair>();
 			Set<String> keySet = parametersMap.keySet();
 			for (String key : keySet) {
@@ -68,7 +70,6 @@ public class HttpUtil {
 			//格式化，使用此方法可以优化字符例如：&=等特殊字符
 			String paramsPart = URLEncodedUtils.format(parameters, "Utf-8");
 			url += "?" + paramsPart;	
-			HttpGet get = new HttpGet(url);
 			//发包以get方式
 			CloseableHttpResponse response = httpClient.execute(get);
 			String result = EntityUtils.toString(response.getEntity());
