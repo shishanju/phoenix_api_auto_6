@@ -28,7 +28,12 @@ public class ExcelUtil {
 		writeData("/testApiCase.xlsx", 2, "5", 5, "hello");
 	}
 
-	
+	/**
+	 * excel读取
+	 * @param excelPath
+	 * @param sheetIndex
+	 * @return
+	 */
 	public static Object[][] readExcel(String excelPath, int sheetIndex){
 		//创建一个二维数组
 		Object[][] datas = null;
@@ -184,11 +189,11 @@ public class ExcelUtil {
 			Sheet sheet = workbook.getSheetAt(sheetNum - 1);
 			//最大的行号
 			int lastRowNum = sheet.getLastRowNum();
-			
+			//遍历所有的行，获得每一行的第一列，获得该列的值与caseId比对，如果相当这就是要回写的目标行
 			//循环来写容器中间的数据
 			for (CellData cellData : dataToWriteList) {
 				//要写的cell相关数据
-				String caseId = cellData.getCasgId();
+				String caseId = cellData.getCaseId();
 				int cellNum = cellData.getCellNum();
 				String dataStr = cellData.getDataStr();			
 				//遍历所有行

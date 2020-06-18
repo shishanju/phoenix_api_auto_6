@@ -11,11 +11,11 @@ public class CellData {
 	//要写的数据
 	private String dataStr;
 
-	public String getCasgId() {
+	public String getCaseId() {
 		return caseId;
 	}
-	public void setCasgId(String casgId) {
-		this.caseId = casgId;
+	public void setCaseId(String caseId) {
+		this.caseId = caseId;
 	}
 	public int getCellNum() {
 		return cellNum;
@@ -32,11 +32,11 @@ public class CellData {
 
 	@Override
 	public String toString() {
-		return "CellData [casgId=" + caseId + ", cellNum=" + cellNum + ", dataStr=" + dataStr + "]";
+		return "CellData [caseId=" + caseId + ", cellNum=" + cellNum + ", dataStr=" + dataStr + "]";
 	}
-	public CellData(String casgId, int i, String dataStr) {
+	public CellData(String caseId, int i, String dataStr) {
 		super();
-		this.caseId = casgId;
+		this.caseId = caseId;
 		this.cellNum = i;
 		this.dataStr = dataStr;
 	}
