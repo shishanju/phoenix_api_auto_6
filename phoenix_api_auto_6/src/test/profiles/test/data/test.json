@@ -1,0 +1,15 @@
+[
+  {
+    "comments":"sad",
+    "request":{
+      "username": 13800000000,
+      "pwd": 123456,
+      "e-mail": "13800000000@qq.com"
+    },
+    "expResult":{
+      "code": "SUCCESS",
+      "resMsg": "登陆成功",
+      "status": 200
+    }
+  }
+]
